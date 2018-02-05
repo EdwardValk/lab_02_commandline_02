@@ -1378,7 +1378,7 @@ ent-v314-013:~ student$
 
 Write the command you used below.  Also copy and paste the output below.
 ----------
-
+curl -o
 
 
 ==========
@@ -1386,15 +1386,15 @@ Write the command you used below.  Also copy and paste the output below.
 
 Write the command you used to determine your directory.  Also, copy and paste the output below.
 ----------
-
-
+pwd
+/Users/student
 
 ==========
 12. If you're not in your home directory, change to it (use the shortcut).
 
 Write the command that you used to change to your home directory.  If you were already in your home directory, write the command that you *would* have used to change to it!
 ----------
-
+cd ~
 
 
 ==========
@@ -1410,7 +1410,10 @@ Use ls to verify that it downloaded.
 
 Write down the command that you used to download the file below.  Additionally, write the output of the command below.
 ----------
-
+curl -o mtec1002-lab-02.zip http://foureyes.github.io/mtec1002-spring2014/labs/02/mtec1002-lab-02.zip
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   178  100   178    0     0    178      0  0:00:01 --:--:--  0:00:01  3955
 
 
 ==========
@@ -1419,14 +1422,14 @@ Write down the command that you used to download the file below.  Additionally, 
 Write down the command that you used to uncompress the file.
 ----------
 
-
+unzip mtec1002-lab-02.zip 
 
 ==========
 15. Change to the directory that was just created.  List the contents (of the directory that was extracted from the labs .zip file). 
 
 Copy and paste the output below.
 ----------
-
+books	logs	web
 
 
 ==========
@@ -1437,7 +1440,18 @@ We're going to mess around with archiving and compressing files.  We'll make a d
 
 Copy and paste the output below.
 ----------
-
+Adlm				Pictures
+Adobe				Public
+Applications			QLData
+BLUE				Things
+Desktop				ipe.properties
+Documents			isus
+Downloads			mtec1002
+Library				mtec1002-lab-02.zip
+MPLABXProjects			mtec1002-lab-02.zip.cpgz
+Movies				pymel.log
+Music				stuff
+New Unity Project		xgen
 
 
 ==========
@@ -1449,7 +1463,7 @@ List the files in the directory you're currently in (which should be stuff).
 
 Copy and paste the output below.
 ----------
-
+hello.txt
 
 
 ==========
@@ -1461,6 +1475,19 @@ List the files in the directory you're currently in (which should be home).
 
 Copy and paste the output below.
 ----------
+dlm				Public
+Adobe				QLData
+Applications			Things
+BLUE				hello.txt
+Desktop				ipe.properties
+Documents			isus
+Downloads			mtec1002
+Library				mtec1002-lab-02.zip
+MPLABXProjects			mtec1002-lab-02.zip.cpgz
+Movies				pymel.log
+Music				stuff
+New Unity Project		stuff.tar
+Pictures			xgen
 
 
 
@@ -1471,7 +1498,8 @@ $ tar -cvf stuff.tar stuff
 
 Copy and paste the output below.
 ----------
-
+a stuff
+a stuff/hello.txt
 
 
 ==========
@@ -1479,6 +1507,34 @@ Copy and paste the output below.
 
 Copy and paste the output below. (It should contain stuff.tar)
 ----------
+Adlm				Public
+Adobe				QLData
+Applications			Things
+BLUE				hello.txt
+Desktop				ipe.properties
+Documents			isus
+Downloads			mtec1002
+Library				mtec1002-lab-02.zip
+MPLABXProjects			mtec1002-lab-02.zip.cpgz
+Movies				pymel.log
+Music				stuff
+New Unity Project		stuff.tar
+Pictures			xgen
+ent-v314-013:~ student$ cd ~
+ent-v314-013:~ student$ ls
+Adlm				Public
+Adobe				QLData
+Applications			Things
+BLUE				hello.txt
+Desktop				ipe.properties
+Documents			isus
+Downloads			mtec1002
+Library				mtec1002-lab-02.zip
+MPLABXProjects			mtec1002-lab-02.zip.cpgz
+Movies				pymel.log
+Music				stuff
+New Unity Project		stuff.tar
+Pictures			xgen
 
 
 
@@ -1489,6 +1545,20 @@ gzip stuff.tar
 
 List your files again.... you should have a new file with a .gz extension.  Copy and paste the output of your this below.
 ----------
+Adlm				QLData
+Adobe				Things
+Applications			hello.txt
+BLUE				ipe.properties
+Desktop				isus
+Documents			mtec1002
+Downloads			mtec1002-lab-02
+Library				mtec1002-lab-02.zip
+MPLABXProjects			mtec1002-lab-02.zip.cpgz
+Movies				pymel.log
+Music				stuff
+New Unity Project		stuff.tar.gz
+Pictures			xgen
+Public
 
 
 
@@ -1503,16 +1573,17 @@ Change your directory to mtec1002-lab-02.
 
 List the files.  Copy and paste the output below (stuff.tar.gz should be there).
 ----------
-
+books		logs		stuff.tar.gz	web
 
 ==========
 23. You should be in the lab directory.  Let's uncompress the file.
 
-$ tar -xvf stuff.tar.gz
+
+
 
 List the files.  Copy and paste the output below (the folder, stuff, should be there).
 ----------
-
+books		logs		stuff		stuff.tar.gz	web
 
 
 ==========
